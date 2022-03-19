@@ -1,0 +1,708 @@
+/* ===================================
+             Global
+=================================== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 0.625rem;
+}
+img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 300;
+}
+section {
+  margin: auto;
+  overflow-x: clip;
+}
+
+/* ========== Utility Classes ========== */
+.container {
+  max-width: 1045px;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.contents-wrapper {
+  width: 290px;
+  margin: auto;
+}
+
+/* ========== Margins ========== */
+.mb-20 {
+  margin-bottom: 2rem;
+}
+
+/* ========== Paddings ========== */
+.pt-45 {
+  padding-top: 4.5rem;
+}
+
+/* ========== Modules ========== */
+.btn {
+  display: block;
+  width: 290px;
+  height: 48px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000000;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.green-btn {
+  background-color: #edd66b;
+}
+.blue-btn {
+  background-color: #439dc7;
+}
+.white-btn {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* ========== Keyframes ========== */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ========== Green Background Area ========== */
+#green-bg {
+  position: relative;
+  background: linear-gradient(80deg, #263e41 25%, #4b6a6e 55%, #4b6a6e 100%);
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+#green-bg::before {
+  position: absolute;
+  top: -250px;
+  left: -150px;
+  content: '';
+  background: url(../img/brust-v1.png) no-repeat center;
+  background-size: cover;
+  width: 350px;
+  height: 400px;
+}
+#green-bg::after {
+  position: absolute;
+  bottom: 406px;
+  right: -133px;
+  content: '';
+  background: url(../img/brust-v2.png) no-repeat center;
+  background-size: cover;
+  width: 260px;
+  height: 260px;
+}
+#green-bg .container {
+  position: relative;
+}
+#dbl-card {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
+#rewards {
+  text-align: center;
+}
+#rewards h1 {
+  width: 214px;
+  font-size: 2.8rem;
+  line-height: 35px;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  margin: 0 auto 2rem;
+}
+#rewards h1 span {
+  font-weight: 600;
+  color: #edd66b;
+  letter-spacing: 0.05em;
+}
+.text-green,
+.text-blue {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.text-green {
+  color: #edd66b;
+}
+.text-blue {
+  color: #439dc7;
+}
+#rewards .contents-wrapper > p {
+  margin-bottom: 2rem;
+}
+#apr span {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+#rewards .green-btn {
+  margin: 2rem auto;
+}
+.link-text-white {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+.hr-green {
+  height: 1px;
+  background-color: #edd66b;
+}
+.hr-blue {
+  height: 1px;
+  background-color: #439dc7;
+}
+#discount {
+  padding-top: 2rem;
+  overflow: hidden;
+  text-align: center;
+}
+.discount-rewards .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#discount .single-card {
+  background: url(../img/single-card-front.png) no-repeat;
+}
+.dark-bg .single-card {
+  background: url(../img/single-card-back.png) no-repeat;
+}
+#discount .single-card {
+  width: 260px;
+  height: 150px;
+  background-size: 118%;
+  background-position: 50% 50%;
+}
+.dark-bg .single-card {
+  width: 260px;
+  height: 162px;
+  background-size: 113%;
+  background-position: 50% 50%;
+}
+.discount-rewards .row .second-col h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+.discount-rewards .row .second-col > :nth-child(2) {
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.dark-bg .row .second-col > :nth-child(3) {
+  margin-bottom: 2rem;
+}
+.discount-rewards .row .first-col {
+  position: relative;
+}
+#discount .one-card {
+  display: block;
+  width: 85%;
+  margin: -7rem auto -6rem;
+}
+.discount-rewards .white-btn {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+.discount-rewards .green-btn,
+.discount-rewards .blue-btn {
+  margin-bottom: 2.5rem;
+}
+.sec-bottom-para {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+.rewards-offer-popup {
+  background: linear-gradient(86deg, #263e41 30%, #4b6a6e 60%, #4b6a6e 80%);
+}
+.rewards-offer-popup,
+.club-rewards-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow-x: clip;
+  overflow-y: scroll;
+  padding-bottom: 8rem;
+  max-width: 800px;
+  z-index: 1;
+  opacity: 0.8;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+.rewards-offer-popup.open,
+.club-rewards-popup.open {
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 2;
+}
+.close-off,
+.close-club {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+.close-off:hover,
+.close-club:hover {
+  transform: rotateZ(90deg);
+}
+.popup-hero {
+  position: relative;
+  text-align: center;
+}
+.rewards-offer-popup .popup-hero::before {
+  position: absolute;
+  top: -100px;
+  left: -205px;
+  content: '';
+  background: url(../img/brust-v1.png) no-repeat center;
+  background-size: cover;
+  width: 350px;
+  height: 400px;
+}
+.rewards-offer-popup .popup-hero::after {
+  position: absolute;
+  bottom: 15px;
+  right: -150px;
+  content: '';
+  background: url(../img/brust-v2.png) no-repeat center;
+  background-size: cover;
+  width: 260px;
+  height: 260px;
+}
+/* .popup-hero-img {
+  margin-bottom: -6rem;
+} */
+.popup-hero-img img {
+  width: 60%;
+  margin: 5rem auto;
+}
+.popup-hero h1 {
+  margin-bottom: 2rem;
+}
+.popup-hero .hr-green,
+.popup-hero .hr-blue {
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
+}
+.benefits-area {
+  text-align: center;
+}
+.benefits-row img {
+  width: 80px;
+  height: auto;
+}
+.benefits-row,
+.rep-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefits-row {
+  margin: 3.5rem 0;
+}
+.benefit-col {
+  flex-basis: 33.333333%;
+  margin-bottom: 2rem;
+}
+.benefit-col div {
+  padding: 0 1.5rem;
+  border-right: 1px solid #6d6d6d;
+}
+.benefit-col p {
+  padding: 0 1.5rem;
+}
+.rep-example {
+  text-align: center;
+}
+.rep-example span.title {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.rep-col {
+  flex-basis: 33.333333%;
+  padding: 0 1rem;
+  border-right: 1px solid #6d6d6d;
+}
+.rep-row .rep-col:last-child {
+  border-right: none;
+}
+.rep-col span {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 35px;
+}
+.rewards-offer-popup .green-btn,
+.club-rewards-popup .blue-btn {
+  margin: 5rem auto 3rem;
+}
+.paras {
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.paras p {
+  margin-bottom: 2.5rem;
+}
+
+/* ========== Dark Background Area ========== */
+.dark-bg {
+  background: linear-gradient(165deg, #101820 45%, #333a40 100%);
+  position: relative;
+  padding-bottom: 4rem;
+}
+.dark-bg::before {
+  position: absolute;
+  top: -95px;
+  left: -283px;
+  content: '';
+  background: url(../img/brust-v3.png) no-repeat center;
+  background-size: cover;
+  width: 452px;
+  height: 450px;
+}
+.dark-bg .one-card {
+  width: 130%;
+  margin: -11rem -4.3rem;
+}
+.dark-bg .first-col,
+.dark-bg .second-col {
+  padding-top: 2rem;
+}
+#upgrade {
+  text-align: center;
+}
+.club-rewards-popup {
+  background: linear-gradient(165deg, #101820 45%, #333a40 100%);
+}
+.club-rewards-popup .popup-hero::before {
+  position: absolute;
+  top: -60px;
+  left: -195px;
+  content: '';
+  background: url(../img/brust-v3.png) no-repeat center;
+  background-size: cover;
+  width: 370px;
+  height: 400px;
+}
+.club-rewards-popup .popup-hero::after {
+  position: absolute;
+  bottom: 80px;
+  right: -170px;
+  content: '';
+  background: url(../img/brust-v3.png) no-repeat center;
+  background-size: cover;
+  width: 330px;
+  height: 260px;
+}
+.club-rewards-popup .popup-hero p {
+  max-width: 425px;
+  margin: auto;
+}
+/* ========== FAQs Area ========== */
+#faq-area {
+  /* background: linear-gradient(30deg, #131f07 30%, #00553f 100%); */
+  /* background: linear-gradient(30deg, #131f07 30%, #0a3821 100%); */
+  background: linear-gradient(80deg, #263e41 25%, #4b6a6e 100%);
+
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+#faq-area h3 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#faq-area h3 + p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+#faq-title {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+#faq-area h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.faq {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+.qn {
+  position: relative;
+  padding-top: 2rem;
+}
+.qn img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 12px;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+.faq.active img {
+  transform: rotate(-180deg);
+}
+.ans {
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.faq.active .ans {
+  margin-top: 2rem;
+  max-height: 300px;
+  animation: fade 0.4s ease-in-out;
+}
+.ans ul li {
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
+}
+
+/* ========== Terms & Conditions  ========== */
+#terms-cond {
+  color: #000000;
+  padding: 4rem 0;
+}
+#terms-cond .contents {
+  text-align: center;
+}
+#terms-cond h3 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#terms-cond p {
+  font-size: 1.2rem;
+}
+#terms-cond p:last-child {
+  margin-top: 2rem;
+}
+
+/* ========== Overlay ========== */
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ===================================
+             Media Queries
+=================================== */
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .contents-wrapper {
+    width: 390px;
+  }
+  #dbl-card {
+    width: 85%;
+  }
+  #rewards h1 {
+    width: max-content;
+  }
+  #discount .single-card {
+    height: 180px;
+  }
+  .dark-bg::before {
+    left: -245px;
+  }
+}
+@media screen and (min-width: 568px) {
+  body {
+    font-size: 1.4rem;
+  }
+  .contents-wrapper {
+    width: 500px;
+  }
+  #rewards h1 {
+    font-size: 3.2rem;
+  }
+  #discount .single-card {
+    height: 240px;
+  }
+  #green-bg::after {
+    width: 290px;
+  }
+  .popup-hero-img {
+    margin-bottom: -12rem;
+    margin-top: -4rem;
+  }
+  .popup-hero-img img {
+    margin: 15rem auto;
+  }
+  .popup-hero::before {
+    top: -60px;
+  }
+  .popup-hero::after {
+    bottom: 100px;
+    right: -170px;
+    width: 300px;
+  }
+  .benefits-row {
+    margin: 3.5rem 5rem;
+  }
+  .rep-row {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .paras {
+    padding: 0 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .contents-wrapper {
+    width: 720px;
+  }
+  #dbl-card {
+    width: 70%;
+  }
+  #rewards .contents-wrapper {
+    width: 594px;
+  }
+  #rewards h1 {
+    font-size: 3.4rem;
+  }
+  #green-bg::after {
+    bottom: 340px;
+  }
+  #discount,
+  #upgrade {
+    padding-top: 4rem;
+    text-align: initial;
+  }
+  .discount-rewards .row {
+    flex-direction: row;
+  }
+  .discount-rewards .row .col {
+    flex-basis: 50%;
+  }
+  #discount .single-card {
+    height: 168px;
+  }
+  .discount-rewards .white-btn,
+  .discount-rewards .green-btn,
+  .discount-rewards .blue-btn {
+    margin-top: 4rem;
+    margin-bottom: 3.5rem;
+  }
+  .dark-bg::before {
+    left: -260px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.6rem;
+  }
+  .contents-wrapper {
+    width: 884px;
+  }
+  #green-bg {
+    padding-top: 6.5rem;
+  }
+  #green-bg::before {
+    top: -270px;
+    left: -115px;
+  }
+  #green-bg::after {
+    bottom: 257px;
+  }
+  #rewards h1 {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+  }
+  #rewards .contents-wrapper > p {
+    margin-bottom: 2.5rem;
+  }
+  #apr span {
+    font-size: 4rem;
+  }
+  .text-green,
+  .text-blue {
+    margin-bottom: 3rem;
+  }
+  .link-text-white {
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 3rem;
+  }
+  #dbl-card {
+    position: absolute;
+    top: -75px;
+    left: -15px;
+    width: 36%;
+  }
+  #discount {
+    padding-top: 4.5rem;
+  }
+  .discount-rewards .row .second-col > :nth-child(3) {
+    max-width: 400px;
+  }
+  #faq-area {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+  #faq-area h5 {
+    font-size: 1.7rem;
+  }
+  .rewards-offer-popup .contents-wrapper,
+  .club-rewards-popup .contents-wrapper {
+    width: 720px;
+  }
+}
