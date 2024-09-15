@@ -5,4 +5,4 @@ In this project a Figma website template has converted into a Fully Functional R
 using HTML5, CSS and Javascript.
 
 ## 🔗 Live Preview
-[Go Live](https://saddamhossain.com/Credit-Card-Rewards/index.html)
+[Go Live](https://saddamhossain.com/credit-card-rewards/index.html)
